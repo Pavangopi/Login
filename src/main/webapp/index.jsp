@@ -11,6 +11,7 @@
 <h1>Login Application</h1>  
 
 <a href="login.jsp">Login</a>
-<a href="ProfileServlet">Profile</a>  
+<a href="login.jsp">Profile</a>
+<a href="confirm.jsp">Register</a>
 </body>
 </html>

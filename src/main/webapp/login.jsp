@@ -9,8 +9,8 @@
 <body style='background-color:#d3d3d3;'>
 <h1>Please login</h1>
 <form action="LoginServlet" method="post">  
-Name    :<input type="text" name="name"><br>  
-Password:<input type="password" name="password"><br>  
-<input type="submit" value="login"> 
+Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" name="name"><br><br>  
+Password:<input type="password" name="password"><br> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="login"> 
 </body>
 </html>
