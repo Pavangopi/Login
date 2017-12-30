@@ -38,8 +38,20 @@ public class LoginServlet extends HttpServlet {
         
         if(name.equals(username)&&password.equals(passwordDb)){  
         request.getRequestDispatcher("loginsuccess.jsp").include(request, response);  
-        out.println("<br/>Welcome, "+name);  
-        HttpSession session=request.getSession();  
+        out.println("<br/>Happy New Year "+name+" Welcome to 2018<br/><br/>");  
+        out.println("<br/>Here are 10 Best Inspirational Quotes on New Year:<br/><br/>");
+       out.println("<br/>For last year's words belongs to last year's language And next year words await another voice<br/>-T.S.Eliot.Four Quartets</br>");
+        out.println("<br/>Tomorrow is the first blank page of a 365-page book. Write a good one.<br/>-Brad Paisley<br/>");
+       out.println("<br/>Cheers to a new year and another chance for us to get it right.<br/>-Oprah Winfrey</br>");
+       out.println("<br/>We will open the book. Its pages are blank. We are going to put words on them ourselves.The book is called Opportunity and its first chapter is New Year's Day. <br/>-Edith Lovejoy Pierce<br/>");
+       out.println("<br/>May the New Year bring you courage to break your resolutions early! My own plan is to swear off every kind of virtue so that I triumph even when I fall! <br/>- Aleister Crowley, Moonchild<br/>");
+       out.println("<br/>The object of a New Year is not that we should have a new year. It is that we should have a new soul and a new nose; new feet, a new backbone, new ears, and new eyes. <br/>- G.K. Chesterton, A Chesterton calendar<br/>");
+       out.println("<br/>In the New Year, never forget to thank to your past years because they enabled you to reach today! Without the stairs of the past, you cannot arrive at the future! <br/>- Mehmet Murat ildan<br/>");
+       out.println("<br/>Let all the failures of your past year be your best guide in the New Year! <br/>- Mehmet Murat ildan<br/>");
+       out.println("<br/>Dear world, I am excited to be alive in you, and I am thankful for another year. <br/>-Charlotte Eriksson<br/>");
+       out.println("<br/>There is nothing magical about the flip of the calendar, but it represents a clean break, a new hope, and a blank canvas.<br/>- Jason Soroski<br/>");
+       out.println("<br/><br/><br/>--------------------------------------------------------------------------------------------@Copyrights Mr.Pavan Gopi Akula-----------------------------------------------------------------------------------------");
+       HttpSession session=request.getSession();  
         session.setAttribute("name",name);  
         //ImageIO.read(new File("image/newimage.jpg"));
         //request.getRequestDispatcher("newimage.jpg").include(request, response);  
@@ -51,7 +63,7 @@ public class LoginServlet extends HttpServlet {
         }catch (EntityNotFoundException e) {
         	// TODO Auto-generated catch block
 
-            out.println("your not registered");
+            out.println("your not registered and please check your details");
         	System.out.println("I GOT EXCEPTION");
         	
         }
