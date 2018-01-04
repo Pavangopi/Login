@@ -49,7 +49,7 @@
 <center>
 <body style='background-color:#d3d3d3;'>
 <h1>Please login</h1>
-<form action="LoginServlet" method="post">  
+<form action="LoginServlet" method="get">  
 <div class="tooltip">
 Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="text" name="name" required> 
   <span class="tooltiptext">Enter user name</span></div>

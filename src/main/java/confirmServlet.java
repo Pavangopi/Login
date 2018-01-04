@@ -20,7 +20,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 
 public class confirmServlet extends HttpServlet {  
 	//Set<Account> acc = new HashSet<Account>();
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)  
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  
                     throws ServletException, IOException {  
     	try{
         response.setContentType("text/html");  

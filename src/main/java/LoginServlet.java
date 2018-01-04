@@ -18,7 +18,7 @@ import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 public class LoginServlet extends HttpServlet {  
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)  
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  
                     throws ServletException, IOException {  
     	try{
         response.setContentType("text/html");  

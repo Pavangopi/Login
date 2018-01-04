@@ -67,7 +67,7 @@
 		<h1>Please Enter your details</h1>
 		<br>
 		<br>
-		<form action="confirmServlet" onsubmit="return checkEmail()" method="post">
+		<form action="confirmServlet" onsubmit="return checkEmail()" method="get">
 			<div class="tooltip">
 				Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input
 					type="text" name="name"  required> <span class="tooltiptext">Enter
