@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.io.IOException;  
 import java.io.PrintWriter;
@@ -19,6 +20,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 public class LoginServlet extends HttpServlet {  
     protected void doPost(HttpServletRequest request, HttpServletResponse response)  
                     throws ServletException, IOException {  
+    	try{
         response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
        
@@ -38,6 +40,7 @@ public class LoginServlet extends HttpServlet {
         
         if(name.equals(username)&&password.equals(passwordDb)){  
         request.getRequestDispatcher("loginsuccess.jsp").include(request, response);  
+        out.println("<center>");
         out.println("<br/>Happy New Year "+name+" Welcome to 2018<br/><br/>");  
         out.println("<br/>Here are 10 Best Inspirational Quotes on New Year:<br/><br/>");
        out.println("<br/>For last year's words belongs to last year's language And next year words await another voice<br/>-T.S.Eliot.Four Quartets</br>");
@@ -50,23 +53,41 @@ public class LoginServlet extends HttpServlet {
        out.println("<br/>Let all the failures of your past year be your best guide in the New Year! <br/>- Mehmet Murat ildan<br/>");
        out.println("<br/>Dear world, I am excited to be alive in you, and I am thankful for another year. <br/>-Charlotte Eriksson<br/>");
        out.println("<br/>There is nothing magical about the flip of the calendar, but it represents a clean break, a new hope, and a blank canvas.<br/>- Jason Soroski<br/>");
-       out.println("<br/><br/><br/>--------------------------------------------------------------------------------------------@Copyrights Mr.Pavan Gopi Akula-----------------------------------------------------------------------------------------");
+       out.println("</center>");
        HttpSession session=request.getSession();  
         session.setAttribute("name",name);  
         //ImageIO.read(new File("image/newimage.jpg"));
         //request.getRequestDispatcher("newimage.jpg").include(request, response);  
         }  
         else{  
-            out.println("<br/>Sorry, username or password error!");  
+        	//out.println("<center>");
+           // out.println("<br/>Sorry, username or password error!");  
+           // out.println("</center>");
+        	out.println("<script type=\"text/javascript\">");
+        	   out.println("alert('User or password incorrect');");
+        	   out.println("</script>");
             request.getRequestDispatcher("login.jsp").include(request, response);  
         }  
         }catch (EntityNotFoundException e) {
         	// TODO Auto-generated catch block
-
+        	out.println("<center>");
             out.println("your not registered and please check your details");
+            out.println("</center>");
         	System.out.println("I GOT EXCEPTION");
         	
         }
         out.close();  
+        }catch (Exception e) {
+        	// TODO Auto-generated catch block
+    	   PrintWriter out=response.getWriter(); 
+    	   
+        	out.println("<center>");
+            out.println("Please  enter valided data");
+            out.println("</center>");
+        	System.out.println("I GOT EXCEPTION");
+        	
+        }
+   
     }  
 }  
+

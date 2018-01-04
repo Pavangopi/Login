@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Index page</title>
   </head>
+  <center>
   <body style='background-color:#ffa500;'>
    
 <h1>Login Application</h1>  
@@ -14,4 +15,5 @@
 <a href="login.jsp">Profile</a>
 <a href="confirm.jsp">Register</a>
 </body>
+</center>
 </html>

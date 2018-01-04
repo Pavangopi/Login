@@ -6,10 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>home</title>
 </head>
+<center>
 <body style='background-color:#ff0000;'>
 <a href="login.jsp">Login</a>
 
 <a href="ProfileServlet">Profile</a>  
 <a href="confirm.jsp">sign up</a>  
 </body>
+</center>
 </html>
